@@ -126,6 +126,9 @@ function animateCounter(element) {
     element.textContent = value.toLocaleString();
     if (progress < 1) {
       requestAnimationFrame(tick);
+    } else {
+      element.classList.add('counter-pop');
+      setTimeout(() => element.classList.remove('counter-pop'), 320);
     }
   }
   requestAnimationFrame(tick);
@@ -147,12 +150,14 @@ function openLightbox(index) {
   currentGalleryIndex = index;
   lightboxImage.src = galleryImages[currentGalleryIndex].src;
   lightbox.classList.remove('hidden');
+  lightbox.classList.add('lightbox-open');
   document.body.style.overflow = 'hidden';
 }
 
 function closeLightbox() {
   if (!lightbox) return;
   lightbox.classList.add('hidden');
+  lightbox.classList.remove('lightbox-open');
   document.body.style.overflow = '';
 }
 

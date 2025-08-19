@@ -76,7 +76,7 @@
     <section id="home" class="relative min-h-[92vh] grid place-items-center bg-hero bg-cover bg-center">
       <div class="absolute inset-0 bg-gradient-to-br from-teal-700/70 via-sky-600/60 to-orange-500/60"></div>
       <div class="relative z-10 max-w-4xl mx-auto px-6 text-center text-white">
-        <h1 class="reveal font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-tight">Easy Go Holidays BD</h1>
+        <h1 class="reveal font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-tight animated-gradient-text">Easy Go Holidays BD</h1>
         <p class="reveal mt-4 text-lg sm:text-xl lg:text-2xl text-white/90">Your Gateway to Hassle-Free Travel</p>
         <div class="reveal mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a href="https://wa.me/8801XXXXXXXXX" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-green-500 hover:bg-green-600 text-white font-semibold shadow-lg shadow-green-600/30 transition">
@@ -87,6 +87,10 @@
         </div>
       </div>
       <div class="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/80 animate-bounce">⬇</div>
+      <!-- floating blobs -->
+      <div class="pointer-events-none absolute -top-10 -left-10 h-40 w-40 rounded-full bg-teal-400/30 blur-2xl animate-blob"></div>
+      <div class="pointer-events-none absolute top-16 -right-10 h-40 w-40 rounded-full bg-sky-400/30 blur-2xl animate-blob animation-delay-2s"></div>
+      <div class="pointer-events-none absolute bottom-10 left-16 h-44 w-44 rounded-full bg-orange-400/30 blur-2xl animate-blob animation-delay-4s"></div>
     </section>
 
     <!-- PACKAGES -->
@@ -98,7 +102,7 @@
         </div>
         <div class="mt-10 grid gap-6 sm:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           <!-- Card 1 -->
-          <article class="reveal group bg-white dark:bg-slate-800 rounded-2xl shadow hover:shadow-xl transition overflow-hidden border border-slate-100 dark:border-slate-700">
+          <article class="reveal group bg-white dark:bg-slate-800 rounded-2xl shadow hover:shadow-xl transition overflow-hidden border border-slate-100 dark:border-slate-700 card-animated">
             <div class="relative">
               <img class="h-56 w-full object-cover" src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?q=80&w=2070&auto=format&fit=crop" alt="Cox's Bazar Beach">
               <div class="absolute top-4 right-4 rounded-2xl bg-orange-500 text-white px-4 py-3 shadow-lg text-right">
@@ -112,7 +116,7 @@
             </div>
           </article>
           <!-- Card 2 -->
-          <article class="reveal group bg-white dark:bg-slate-800 rounded-2xl shadow hover:shadow-xl transition overflow-hidden border border-slate-100 dark:border-slate-700">
+          <article class="reveal group bg-white dark:bg-slate-800 rounded-2xl shadow hover:shadow-xl transition overflow-hidden border border-slate-100 dark:border-slate-700 card-animated">
             <div class="relative">
               <img class="h-56 w-full object-cover" src="https://images.unsplash.com/photo-1501117716987-c8e3f7a3a273?q=80&w=2069&auto=format&fit=crop" alt="Sreemangal Tea Gardens">
               <div class="absolute top-4 right-4 rounded-2xl bg-teal-500 text-white px-4 py-3 shadow-lg text-right">
@@ -126,7 +130,7 @@
             </div>
           </article>
           <!-- Card 3 -->
-          <article class="reveal group bg-white dark:bg-slate-800 rounded-2xl shadow hover:shadow-xl transition overflow-hidden border border-slate-100 dark:border-slate-700">
+          <article class="reveal group bg-white dark:bg-slate-800 rounded-2xl shadow hover:shadow-xl transition overflow-hidden border border-slate-100 dark:border-slate-700 card-animated">
             <div class="relative">
               <img class="h-56 w-full object-cover" src="https://images.unsplash.com/photo-1544989164-31dc3c645987?q=80&w=2069&auto=format&fit=crop" alt="Saint Martin's Island">
               <div class="absolute top-4 right-4 rounded-2xl bg-sky-500 text-white px-4 py-3 shadow-lg text-right">
@@ -140,7 +144,7 @@
             </div>
           </article>
           <!-- Card 4 -->
-          <article class="reveal group bg-white dark:bg-slate-800 rounded-2xl shadow hover:shadow-xl transition overflow-hidden border border-slate-100 dark:border-slate-700 md:col-span-2 lg:col-span-1">
+          <article class="reveal group bg-white dark:bg-slate-800 rounded-2xl shadow hover:shadow-xl transition overflow-hidden border border-slate-100 dark:border-slate-700 md:col-span-2 lg:col-span-1 card-animated">
             <div class="relative">
               <img class="h-56 w-full object-cover" src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2064&auto=format&fit=crop" alt="Bandarban Hills">
               <div class="absolute top-4 right-4 rounded-2xl bg-yellow-500 text-white px-4 py-3 shadow-lg text-right">
@@ -154,7 +158,7 @@
             </div>
           </article>
           <!-- Card 5 -->
-          <article class="reveal group bg-white dark:bg-slate-800 rounded-2xl shadow hover:shadow-xl transition overflow-hidden border border-slate-100 dark:border-slate-700">
+          <article class="reveal group bg-white dark:bg-slate-800 rounded-2xl shadow hover:shadow-xl transition overflow-hidden border border-slate-100 dark:border-slate-700 card-animated">
             <div class="relative">
               <img class="h-56 w-full object-cover" src="https://images.unsplash.com/photo-1526779259212-939e64788e3c?q=80&w=2070&auto=format&fit=crop" alt="Sundarbans">
               <div class="absolute top-4 right-4 rounded-2xl bg-teal-600 text-white px-4 py-3 shadow-lg text-right">
@@ -168,7 +172,7 @@
             </div>
           </article>
           <!-- Card 6 -->
-          <article class="reveal group bg-white dark:bg-slate-800 rounded-2xl shadow hover:shadow-xl transition overflow-hidden border border-slate-100 dark:border-slate-700">
+          <article class="reveal group bg-white dark:bg-slate-800 rounded-2xl shadow hover:shadow-xl transition overflow-hidden border border-slate-100 dark:border-slate-700 card-animated">
             <div class="relative">
               <img class="h-56 w-full object-cover" src="https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?q=80&w=2070&auto=format&fit=crop" alt="International Trip">
               <span class="absolute top-4 right-4 rounded-full bg-orange-600 text-white text-sm font-bold px-3 py-1 shadow">Custom</span>
