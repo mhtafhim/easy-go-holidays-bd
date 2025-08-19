@@ -7,6 +7,42 @@ if (menuToggleButton && mobileMenu) {
   });
 }
 
+// Theme: init and toggle
+const themeToggleButton = document.getElementById('themeToggle');
+const iconSun = document.getElementById('themeIconSun');
+const iconMoon = document.getElementById('themeIconMoon');
+
+function applyTheme(theme) {
+  const root = document.documentElement;
+  if (theme === 'dark') {
+    root.classList.add('dark');
+    if (iconSun) iconSun.classList.remove('hidden');
+    if (iconMoon) iconMoon.classList.add('hidden');
+  } else {
+    root.classList.remove('dark');
+    if (iconSun) iconSun.classList.add('hidden');
+    if (iconMoon) iconMoon.classList.remove('hidden');
+  }
+}
+
+function getPreferredTheme() {
+  const stored = localStorage.getItem('eg_theme');
+  if (stored === 'light' || stored === 'dark') return stored;
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  return prefersDark ? 'dark' : 'light';
+}
+
+let currentTheme = getPreferredTheme();
+applyTheme(currentTheme);
+
+if (themeToggleButton) {
+  themeToggleButton.addEventListener('click', () => {
+    currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    localStorage.setItem('eg_theme', currentTheme);
+    applyTheme(currentTheme);
+  });
+}
+
 // Collapse mobile menu on link click
 const allNavLinks = Array.from(document.querySelectorAll('a.nav-link'));
 allNavLinks.forEach(link => {

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./style.css">
     <script>
       tailwind.config = {
+        darkMode: 'class',
         theme: {
           extend: {
             fontFamily: { sans: ['Poppins', 'ui-sans-serif', 'system-ui'] },
@@ -27,9 +28,9 @@
     </script>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%230ea5e9' d='M6 48l14-6l8 8l20-28l10 6L40 8z'/%3E%3C/svg%3E"/>
   </head>
-  <body class="text-slate-800 bg-white selection:bg-yellow-300/70 selection:text-slate-900">
+  <body class="text-slate-800 bg-white dark:text-slate-100 dark:bg-slate-900 selection:bg-yellow-300/70 selection:text-slate-900">
     <!-- NAVBAR -->
-    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur shadow">
+    <header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur shadow">
       <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
           <a href="#home" class="flex items-center gap-2">
@@ -37,27 +38,35 @@
             <span class="font-extrabold text-lg sm:text-xl bg-gradient-to-r from-teal-600 via-sky-600 to-orange-500 bg-clip-text text-transparent">Easy Go Holidays BD</span>
           </a>
           <div class="hidden md:flex items-center gap-6">
-            <a href="#home" class="nav-link py-2 text-slate-700 hover:text-teal-600">Home</a>
-            <a href="#packages" class="nav-link py-2 text-slate-700 hover:text-teal-600">Packages</a>
-            <a href="#stats" class="nav-link py-2 text-slate-700 hover:text-teal-600">Stats</a>
-            <a href="#gallery" class="nav-link py-2 text-slate-700 hover:text-teal-600">Gallery</a>
-            <a href="#reviews" class="nav-link py-2 text-slate-700 hover:text-teal-600">Reviews</a>
-            <a href="#about" class="nav-link py-2 text-slate-700 hover:text-teal-600">About</a>
-            <a href="#contact" class="nav-link py-2 text-slate-700 hover:text-teal-600">Contact</a>
+            <a href="#home" class="nav-link py-2 text-slate-700 dark:text-slate-200 hover:text-teal-600 hover:dark:text-teal-400">Home</a>
+            <a href="#packages" class="nav-link py-2 text-slate-700 dark:text-slate-200 hover:text-teal-600 hover:dark:text-teal-400">Packages</a>
+            <a href="#stats" class="nav-link py-2 text-slate-700 dark:text-slate-200 hover:text-teal-600 hover:dark:text-teal-400">Stats</a>
+            <a href="#gallery" class="nav-link py-2 text-slate-700 dark:text-slate-200 hover:text-teal-600 hover:dark:text-teal-400">Gallery</a>
+            <a href="#reviews" class="nav-link py-2 text-slate-700 dark:text-slate-200 hover:text-teal-600 hover:dark:text-teal-400">Reviews</a>
+            <a href="#about" class="nav-link py-2 text-slate-700 dark:text-slate-200 hover:text-teal-600 hover:dark:text-teal-400">About</a>
+            <a href="#contact" class="nav-link py-2 text-slate-700 dark:text-slate-200 hover:text-teal-600 hover:dark:text-teal-400">Contact</a>
           </div>
+          <button id="themeToggle" class="inline-flex items-center justify-center p-2 rounded-md text-slate-700 dark:text-slate-200 hover:text-teal-600 hover:dark:text-teal-400 hover:bg-slate-100 hover:dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-teal-500 md:ml-2" aria-label="Toggle dark mode">
+            <span id="themeIconSun" class="hidden" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.364 6.364-1.414-1.414M7.05 7.05 5.636 5.636m12.728 0-1.414 1.414M7.05 16.95l-1.414 1.414M12 8.25a3.75 3.75 0 1 1 0 7.5 3.75 3.75 0 0 1 0-7.5z"/></svg>
+            </span>
+            <span id="themeIconMoon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M21.752 15.002A9.718 9.718 0 0 1 12.75 22.5c-5.385 0-9.75-4.365-9.75-9.75 0-4.332 2.78-8.018 6.667-9.279.478-.157.932.34.74.81A7.5 7.5 0 0 0 18 16.5c1.89 0 3.63-.66 5.01-1.758.41-.323.991.07.742.56z"/></svg>
+            </span>
+          </button>
           <button id="menuToggle" class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-slate-700 hover:text-teal-600 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-teal-500">
             <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
           </button>
         </div>
         <div id="mobileMenu" class="md:hidden hidden pb-4">
           <div class="flex flex-col gap-2">
-            <a href="#home" class="nav-link block px-2 py-2 rounded hover:bg-slate-100">Home</a>
-            <a href="#packages" class="nav-link block px-2 py-2 rounded hover:bg-slate-100">Packages</a>
-            <a href="#stats" class="nav-link block px-2 py-2 rounded hover:bg-slate-100">Stats</a>
-            <a href="#gallery" class="nav-link block px-2 py-2 rounded hover:bg-slate-100">Gallery</a>
-            <a href="#reviews" class="nav-link block px-2 py-2 rounded hover:bg-slate-100">Reviews</a>
-            <a href="#about" class="nav-link block px-2 py-2 rounded hover:bg-slate-100">About</a>
-            <a href="#contact" class="nav-link block px-2 py-2 rounded hover:bg-slate-100">Contact</a>
+            <a href="#home" class="nav-link block px-2 py-2 rounded hover:bg-slate-100 hover:dark:bg-slate-800 dark:text-slate-200">Home</a>
+            <a href="#packages" class="nav-link block px-2 py-2 rounded hover:bg-slate-100 hover:dark:bg-slate-800 dark:text-slate-200">Packages</a>
+            <a href="#stats" class="nav-link block px-2 py-2 rounded hover:bg-slate-100 hover:dark:bg-slate-800 dark:text-slate-200">Stats</a>
+            <a href="#gallery" class="nav-link block px-2 py-2 rounded hover:bg-slate-100 hover:dark:bg-slate-800 dark:text-slate-200">Gallery</a>
+            <a href="#reviews" class="nav-link block px-2 py-2 rounded hover:bg-slate-100 hover:dark:bg-slate-800 dark:text-slate-200">Reviews</a>
+            <a href="#about" class="nav-link block px-2 py-2 rounded hover:bg-slate-100 hover:dark:bg-slate-800 dark:text-slate-200">About</a>
+            <a href="#contact" class="nav-link block px-2 py-2 rounded hover:bg-slate-100 hover:dark:bg-slate-800 dark:text-slate-200">Contact</a>
           </div>
         </div>
       </nav>
@@ -81,15 +90,15 @@
     </section>
 
     <!-- PACKAGES -->
-    <section id="packages" class="py-16 bg-gradient-to-b from-white via-sky-50 to-teal-50">
+    <section id="packages" class="py-16 bg-gradient-to-b from-white via-sky-50 to-teal-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="reveal text-center">
           <h2 class="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-sky-600 to-teal-600 bg-clip-text text-transparent">Featured Packages</h2>
-          <p class="mt-3 text-slate-600">Flexible itineraries, handpicked stays, and seamless support.</p>
+          <p class="mt-3 text-slate-600 dark:text-slate-300">Flexible itineraries, handpicked stays, and seamless support.</p>
         </div>
         <div class="mt-10 grid gap-6 sm:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           <!-- Card 1 -->
-          <article class="reveal group bg-white rounded-2xl shadow hover:shadow-xl transition overflow-hidden border border-slate-100">
+          <article class="reveal group bg-white dark:bg-slate-800 rounded-2xl shadow hover:shadow-xl transition overflow-hidden border border-slate-100 dark:border-slate-700">
             <div class="relative">
               <img class="h-56 w-full object-cover" src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?q=80&w=2070&auto=format&fit=crop" alt="Cox's Bazar Beach">
               <div class="absolute top-4 right-4 rounded-2xl bg-orange-500 text-white px-4 py-3 shadow-lg text-right">
@@ -98,12 +107,12 @@
               </div>
             </div>
             <div class="p-5">
-              <h3 class="text-xl font-bold text-slate-800">Cox's Bazar Beach Escape - 3 Days</h3>
-              <p class="mt-2 text-slate-600 leading-relaxed">Relax by the world's longest sea beach with premium hotels, sunset cruise, and curated seaside dining.</p>
+              <h3 class="text-xl font-bold text-slate-800 dark:text-white">Cox's Bazar Beach Escape - 3 Days</h3>
+              <p class="mt-2 text-slate-600 dark:text-slate-300 leading-relaxed">Relax by the world's longest sea beach with premium hotels, sunset cruise, and curated seaside dining.</p>
             </div>
           </article>
           <!-- Card 2 -->
-          <article class="reveal group bg-white rounded-2xl shadow hover:shadow-xl transition overflow-hidden border border-slate-100">
+          <article class="reveal group bg-white dark:bg-slate-800 rounded-2xl shadow hover:shadow-xl transition overflow-hidden border border-slate-100 dark:border-slate-700">
             <div class="relative">
               <img class="h-56 w-full object-cover" src="https://images.unsplash.com/photo-1501117716987-c8e3f7a3a273?q=80&w=2069&auto=format&fit=crop" alt="Sreemangal Tea Gardens">
               <div class="absolute top-4 right-4 rounded-2xl bg-teal-500 text-white px-4 py-3 shadow-lg text-right">
@@ -112,12 +121,12 @@
               </div>
             </div>
             <div class="p-5">
-              <h3 class="text-xl font-bold text-slate-800">Sreemangal Nature Retreat - 2 Days</h3>
-              <p class="mt-2 text-slate-600 leading-relaxed">Immerse in emerald tea gardens, Lawachara rainforest walk, and seven-layer tea experience. Perfect weekend escape.</p>
+              <h3 class="text-xl font-bold text-slate-800 dark:text-white">Sreemangal Nature Retreat - 2 Days</h3>
+              <p class="mt-2 text-slate-600 dark:text-slate-300 leading-relaxed">Immerse in emerald tea gardens, Lawachara rainforest walk, and seven-layer tea experience. Perfect weekend escape.</p>
             </div>
           </article>
           <!-- Card 3 -->
-          <article class="reveal group bg-white rounded-2xl shadow hover:shadow-xl transition overflow-hidden border border-slate-100">
+          <article class="reveal group bg-white dark:bg-slate-800 rounded-2xl shadow hover:shadow-xl transition overflow-hidden border border-slate-100 dark:border-slate-700">
             <div class="relative">
               <img class="h-56 w-full object-cover" src="https://images.unsplash.com/photo-1544989164-31dc3c645987?q=80&w=2069&auto=format&fit=crop" alt="Saint Martin's Island">
               <div class="absolute top-4 right-4 rounded-2xl bg-sky-500 text-white px-4 py-3 shadow-lg text-right">
@@ -126,12 +135,12 @@
               </div>
             </div>
             <div class="p-5">
-              <h3 class="text-xl font-bold text-slate-800">Saint Martin's Coral Paradise - 3 Days</h3>
-              <p class="mt-2 text-slate-600 leading-relaxed">Crystal clear waters, fresh seafood grills, and stargazing nights. Unplug and rejuvenate on the serene island.</p>
+              <h3 class="text-xl font-bold text-slate-800 dark:text-white">Saint Martin's Coral Paradise - 3 Days</h3>
+              <p class="mt-2 text-slate-600 dark:text-slate-300 leading-relaxed">Crystal clear waters, fresh seafood grills, and stargazing nights. Unplug and rejuvenate on the serene island.</p>
             </div>
           </article>
           <!-- Card 4 -->
-          <article class="reveal group bg-white rounded-2xl shadow hover:shadow-xl transition overflow-hidden border border-slate-100 md:col-span-2 lg:col-span-1">
+          <article class="reveal group bg-white dark:bg-slate-800 rounded-2xl shadow hover:shadow-xl transition overflow-hidden border border-slate-100 dark:border-slate-700 md:col-span-2 lg:col-span-1">
             <div class="relative">
               <img class="h-56 w-full object-cover" src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2064&auto=format&fit=crop" alt="Bandarban Hills">
               <div class="absolute top-4 right-4 rounded-2xl bg-yellow-500 text-white px-4 py-3 shadow-lg text-right">
@@ -140,12 +149,12 @@
               </div>
             </div>
             <div class="p-5">
-              <h3 class="text-xl font-bold text-slate-800">Bandarban Hill Adventure - 3 Days</h3>
-              <p class="mt-2 text-slate-600 leading-relaxed">Trek lush trails, visit tribal villages, and watch sunrise from Nilgiri. Guided tours with safety-first approach.</p>
+              <h3 class="text-xl font-bold text-slate-800 dark:text-white">Bandarban Hill Adventure - 3 Days</h3>
+              <p class="mt-2 text-slate-600 dark:text-slate-300 leading-relaxed">Trek lush trails, visit tribal villages, and watch sunrise from Nilgiri. Guided tours with safety-first approach.</p>
             </div>
           </article>
           <!-- Card 5 -->
-          <article class="reveal group bg-white rounded-2xl shadow hover:shadow-xl transition overflow-hidden border border-slate-100">
+          <article class="reveal group bg-white dark:bg-slate-800 rounded-2xl shadow hover:shadow-xl transition overflow-hidden border border-slate-100 dark:border-slate-700">
             <div class="relative">
               <img class="h-56 w-full object-cover" src="https://images.unsplash.com/photo-1526779259212-939e64788e3c?q=80&w=2070&auto=format&fit=crop" alt="Sundarbans">
               <div class="absolute top-4 right-4 rounded-2xl bg-teal-600 text-white px-4 py-3 shadow-lg text-right">
@@ -154,19 +163,19 @@
               </div>
             </div>
             <div class="p-5">
-              <h3 class="text-xl font-bold text-slate-800">Sundarbans Wildlife Cruise - 3 Days</h3>
-              <p class="mt-2 text-slate-600 leading-relaxed">Experience the mangrove wonderland, spot wildlife with expert rangers, and savor onboard delicacies.</p>
+              <h3 class="text-xl font-bold text-slate-800 dark:text-white">Sundarbans Wildlife Cruise - 3 Days</h3>
+              <p class="mt-2 text-slate-600 dark:text-slate-300 leading-relaxed">Experience the mangrove wonderland, spot wildlife with expert rangers, and savor onboard delicacies.</p>
             </div>
           </article>
           <!-- Card 6 -->
-          <article class="reveal group bg-white rounded-2xl shadow hover:shadow-xl transition overflow-hidden border border-slate-100">
+          <article class="reveal group bg-white dark:bg-slate-800 rounded-2xl shadow hover:shadow-xl transition overflow-hidden border border-slate-100 dark:border-slate-700">
             <div class="relative">
               <img class="h-56 w-full object-cover" src="https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?q=80&w=2070&auto=format&fit=crop" alt="International Trip">
               <span class="absolute top-4 right-4 rounded-full bg-orange-600 text-white text-sm font-bold px-3 py-1 shadow">Custom</span>
             </div>
             <div class="p-5">
-              <h3 class="text-xl font-bold text-slate-800">International Tailor-Made</h3>
-              <p class="mt-2 text-slate-600 leading-relaxed">Dubai, Bali, Malaysia, Thailand and more—flights, visas, hotels, and curated activities. Tell us your dates, we do the rest.</p>
+              <h3 class="text-xl font-bold text-slate-800 dark:text-white">International Tailor-Made</h3>
+              <p class="mt-2 text-slate-600 dark:text-slate-300 leading-relaxed">Dubai, Bali, Malaysia, Thailand and more—flights, visas, hotels, and curated activities. Tell us your dates, we do the rest.</p>
             </div>
           </article>
         </div>
@@ -201,11 +210,11 @@
     </section>
 
     <!-- GALLERY -->
-    <section id="gallery" class="py-16 bg-white">
+    <section id="gallery" class="py-16 bg-white dark:bg-slate-900">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="reveal text-center">
           <h2 class="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-orange-600 to-yellow-500 bg-clip-text text-transparent">Trip Gallery</h2>
-          <p class="mt-3 text-slate-600">Memories from our travelers</p>
+          <p class="mt-3 text-slate-600 dark:text-slate-300">Memories from our travelers</p>
         </div>
         <div class="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
           <img class="reveal gallery-img aspect-[4/3] w-full object-cover rounded-xl hover:scale-[1.02] transition shadow" src="https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=2069&auto=format&fit=crop" alt="Gallery image 1">
@@ -223,21 +232,21 @@
         </div>
       </div>
       <!-- Lightbox -->
-      <div id="lightbox" class="fixed inset-0 bg-black/80 hidden items-center justify-center p-4">
+      <div id="lightbox" class="fixed inset-0 bg-black/80 hidden grid place-items-center p-4">
         <button id="lightboxClose" class="absolute top-4 right-4 text-white text-3xl leading-none">×</button>
         <img id="lightboxImage" class="max-h-[85vh] w-auto rounded-xl shadow-2xl" alt="Expanded image" />
       </div>
     </section>
 
     <!-- REVIEWS -->
-    <section id="reviews" class="py-16 bg-gradient-to-b from-yellow-50 to-orange-50">
+    <section id="reviews" class="py-16 bg-gradient-to-b from-yellow-50 to-orange-50 dark:from-slate-900 dark:to-slate-900">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="reveal text-center">
           <h2 class="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-teal-600 to-sky-600 bg-clip-text text-transparent">What Our Customers Say</h2>
-          <p class="mt-3 text-slate-600">Real stories, real smiles</p>
+          <p class="mt-3 text-slate-600 dark:text-slate-300">Real stories, real smiles</p>
         </div>
         <div class="reveal mt-10 relative">
-          <div class="overflow-hidden rounded-2xl shadow-lg bg-white">
+          <div class="overflow-hidden rounded-2xl shadow-lg bg-white dark:bg-slate-800">
             <div id="reviewsTrack" class="flex transition-transform duration-500 ease-out" style="will-change: transform;">
               <!-- Slide 1 -->
               <div class="shrink-0 w-full p-6 sm:p-10 grid sm:grid-cols-[120px,1fr] gap-6 items-center">
@@ -247,7 +256,7 @@
                     <h3 class="font-bold text-lg">Nusrat Jahan</h3>
                     <div class="text-yellow-500">★★★★★</div>
                   </div>
-                  <p class="mt-2 text-slate-600">Seamless experience! They handled everything from hotel to transport. Our Cox's Bazar trip was unforgettable.</p>
+                  <p class="mt-2 text-slate-600 dark:text-slate-300">Seamless experience! They handled everything from hotel to transport. Our Cox's Bazar trip was unforgettable.</p>
                 </div>
               </div>
               <!-- Slide 2 -->
@@ -258,7 +267,7 @@
                     <h3 class="font-bold text-lg">Rakib Hasan</h3>
                     <div class="text-yellow-500">★★★★★</div>
                   </div>
-                  <p class="mt-2 text-slate-600">Quick responses and great value for money. Highly recommend their Bandarban package!</p>
+                  <p class="mt-2 text-slate-600 dark:text-slate-300">Quick responses and great value for money. Highly recommend their Bandarban package!</p>
                 </div>
               </div>
               <!-- Slide 3 -->
@@ -269,7 +278,7 @@
                     <h3 class="font-bold text-lg">Tania Karim</h3>
                     <div class="text-yellow-500">★★★★★</div>
                   </div>
-                  <p class="mt-2 text-slate-600">Loved the Saint Martin's itinerary. Clean hotels, friendly guides, and tasty food options.</p>
+                  <p class="mt-2 text-slate-600 dark:text-slate-300">Loved the Saint Martin's itinerary. Clean hotels, friendly guides, and tasty food options.</p>
                 </div>
               </div>
               <!-- Slide 4 -->
@@ -280,7 +289,7 @@
                     <h3 class="font-bold text-lg">Shahriyar Alam</h3>
                     <div class="text-yellow-500">★★★★★</div>
                   </div>
-                  <p class="mt-2 text-slate-600">Their team made our visa and hotel bookings super easy for our Thailand trip.</p>
+                  <p class="mt-2 text-slate-600 dark:text-slate-300">Their team made our visa and hotel bookings super easy for our Thailand trip.</p>
                 </div>
               </div>
             </div>
@@ -292,13 +301,13 @@
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="py-16 bg-white">
+    <section id="about" class="py-16 bg-white dark:bg-slate-900">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid gap-10 md:grid-cols-2 items-center">
           <div class="reveal order-2 md:order-1">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-800">About Easy Go Holidays BD</h2>
-            <p class="mt-4 text-slate-600 leading-relaxed">We are a Bangladesh-based travel agency focused on stress-free trips with transparent pricing and real-time support. From weekend getaways to international holidays, we curate experiences that match your style and budget.</p>
-            <ul class="mt-6 space-y-2 text-slate-700">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-800 dark:text-white">About Easy Go Holidays BD</h2>
+            <p class="mt-4 text-slate-600 dark:text-slate-300 leading-relaxed">We are a Bangladesh-based travel agency focused on stress-free trips with transparent pricing and real-time support. From weekend getaways to international holidays, we curate experiences that match your style and budget.</p>
+            <ul class="mt-6 space-y-2 text-slate-700 dark:text-slate-300">
               <li>✔ Trusted and experienced team</li>
               <li>✔ Hassle-free planning and bookings</li>
               <li>✔ 24/7 WhatsApp support</li>
@@ -316,32 +325,32 @@
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="py-16 bg-gradient-to-tr from-sky-50 to-yellow-50">
+    <section id="contact" class="py-16 bg-gradient-to-tr from-sky-50 to-yellow-50 dark:from-slate-900 dark:to-slate-900">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="reveal text-center">
           <h2 class="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-sky-600 via-teal-600 to-orange-600 bg-clip-text text-transparent">Get in Touch</h2>
-          <p class="mt-3 text-slate-600">We reply fast! Reach us anytime.</p>
+          <p class="mt-3 text-slate-600 dark:text-slate-300">We reply fast! Reach us anytime.</p>
         </div>
         <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="reveal bg-white rounded-2xl p-6 shadow hover:shadow-xl transition">
+          <div class="reveal bg-white dark:bg-slate-800 rounded-2xl p-6 shadow hover:shadow-xl transition">
             <div class="text-3xl">💬</div>
             <h3 class="mt-3 font-bold text-lg">WhatsApp</h3>
-            <p class="text-slate-600">+8801717171717</p>
-            <p class="text-slate-600">Chat with our support team 24/7.</p>
+            <p class="text-slate-600 dark:text-slate-300">+8801717171717</p>
+            <p class="text-slate-600 dark:text-slate-300">Chat with our support team 24/7.</p>
             <a href="https://wa.me/8801XXXXXXXXX" target="_blank" class="mt-4 inline-block px-5 py-2 rounded-xl bg-green-500 hover:bg-green-600 text-white font-semibold">Message Us</a>
           </div>
-          <div class="reveal bg-white rounded-2xl p-6 shadow hover:shadow-xl transition">
+          <div class="reveal bg-white dark:bg-slate-800 rounded-2xl p-6 shadow hover:shadow-xl transition">
             <div class="text-3xl">✉️</div>
             <h3 class="mt-3 font-bold text-lg">Email</h3>
-            <p class="text-slate-600">info@easygoholidaysbd.com</p>
-            <p class="text-slate-600">Send us your travel plan.</p>
+            <p class="text-slate-600 dark:text-slate-300">info@easygoholidaysbd.com</p>
+            <p class="text-slate-600 dark:text-slate-300">Send us your travel plan.</p>
             <a href="mailto:info@easygoholidaysbd.com" class="mt-4 inline-block px-5 py-2 rounded-xl bg-sky-500 hover:bg-sky-600 text-white font-semibold">Email Us</a>
           </div>
-          <div class="reveal bg-white rounded-2xl p-6 shadow hover:shadow-xl transition">
+          <div class="reveal bg-white dark:bg-slate-800 rounded-2xl p-6 shadow hover:shadow-xl transition">
             <div class="text-3xl">📞</div>
             <h3 class="mt-3 font-bold text-lg">Phone</h3>
-            <p class="text-slate-600">+8801717171717</p>
-            <p class="text-slate-600">Talk with our travel expert.</p>
+            <p class="text-slate-600 dark:text-slate-300">+8801717171717</p>
+            <p class="text-slate-600 dark:text-slate-300">Talk with our travel expert.</p>
             <a href="tel:+8801XXXXXXXXX" class="mt-4 inline-block px-5 py-2 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-semibold">Call Now</a>
           </div>
         </div>
@@ -349,13 +358,13 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="border-t border-slate-200">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-slate-600">
+    <footer class="border-t border-slate-200 dark:border-slate-700">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-slate-600 dark:text-slate-400">
         <p>© <span id="year"></span> Easy Go Holidays BD. All rights reserved.</p>
         <div class="flex items-center gap-4">
-          <a class="hover:text-teal-600" href="#about">About</a>
-          <a class="hover:text-teal-600" href="#contact">Contact</a>
-          <a class="hover:text-teal-600" href="#packages">Packages</a>
+          <a class="hover:text-teal-600 hover:dark:text-teal-400" href="#about">About</a>
+          <a class="hover:text-teal-600 hover:dark:text-teal-400" href="#contact">Contact</a>
+          <a class="hover:text-teal-600 hover:dark:text-teal-400" href="#packages">Packages</a>
         </div>
       </div>
     </footer>
