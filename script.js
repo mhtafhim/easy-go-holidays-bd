@@ -77,6 +77,16 @@ function updateActiveNav() {
 window.addEventListener('scroll', throttle(updateActiveNav, 150));
 window.addEventListener('load', updateActiveNav);
 
+// card 2 package...
+function openDetails() {
+  document.getElementById("detailsModal").classList.remove("hidden");
+  document.getElementById("detailsModal").classList.add("flex");
+}
+function closeDetails() {
+  document.getElementById("detailsModal").classList.add("hidden");
+  document.getElementById("detailsModal").classList.remove("flex");
+}
+
 // Simple throttle
 function throttle(fn, wait) {
   let inThrottle = false;
