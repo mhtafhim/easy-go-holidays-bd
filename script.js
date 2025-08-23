@@ -77,14 +77,23 @@ function updateActiveNav() {
 window.addEventListener('scroll', throttle(updateActiveNav, 150));
 window.addEventListener('load', updateActiveNav);
 
-// card 2 package...
+// card 1 package...
 function openDetails() {
-  document.getElementById("detailsModal").classList.remove("hidden");
-  document.getElementById("detailsModal").classList.add("flex");
+  document.getElementById("nepalTours").classList.remove("hidden");
+  document.getElementById("nepalTours").classList.add("flex");
 }
 function closeDetails() {
-  document.getElementById("detailsModal").classList.add("hidden");
-  document.getElementById("detailsModal").classList.remove("flex");
+  document.getElementById("nepalTours").classList.add("hidden");
+  document.getElementById("nepalTours").classList.remove("flex");
+}
+// card 2 package...
+function openDetails() {
+  document.getElementById("msTours").classList.remove("hidden");
+  document.getElementById("msTours").classList.add("flex");
+}
+function closeDetails() {
+  document.getElementById("msTours").classList.add("hidden");
+  document.getElementById("msTours").classList.remove("flex");
 }
 
 // Simple throttle
