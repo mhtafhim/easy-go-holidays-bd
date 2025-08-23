@@ -315,7 +315,6 @@
           </div>
         </article>
 
-
         <!-- ========== Overlay Modal ========== -->
         <div id="msTours" class=" fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
           <div
@@ -407,53 +406,142 @@
         </div>
         <!-- Card 3 -->
         <article
-          class="reveal group bg-white dark:bg-slate-800 rounded-2xl shadow hover:shadow-xl transition overflow-hidden border border-slate-100 dark:border-slate-700 card-animated">
+          class="bg-white dark:bg-slate-800 rounded-2xl shadow hover:shadow-xl transition overflow-hidden border border-slate-100 dark:border-slate-700">
           <div class="relative">
-            <img class="h-56 w-full object-cover" src="assets/package/india.jpg" alt="Saint Martin's Island">
-            <div class="absolute top-4 right-4 rounded-2xl bg-sky-500 text-white px-4 py-3 shadow-lg text-right">
-              <div class="text-xl sm:text-2xl font-extrabold leading-none">৳ --, ---</div>
-              <div class="text-[11px] sm:text-xs line-through text-white/90">৳ 59,999</div>
-            </div>
-          </div>
-          <!-- Warning -->
-          <div
-            class=" top-40 left-0.5 rounded-2xl bg-amber-100/95 text-black px-4 py-2 shadow-lg flex items-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5" viewBox="0 0 24 24"
-              fill="currentColor">
-              <path
-                d="M12 2a1 1 0 0 1 .894.553l9 18A1 1 0 0 1 21 22H3a1 1 0 0 1-.894-1.447l9-18A1 1 0 0 1 12 2zm0 6a1 1 0 0 0-1 1v5a1 1 0 1 0 2 0V9a1 1 0 0 0-1-1zm0 10a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5z" />
-            </svg>
-            <span class="text-xs sm:text-sm font-semibold tracking-wide">This package is currently unavailable</span>
-          </div>
-          <div class="p-6 bg-white rounded-lg shadow-lg max-w-xl mx-auto">
-            <h3 class="text-2xl font-bold text-slate-800 mb-4">🌏 India Tour Package - 5 Days, 4 Nights</h3>
+            <img class="h-56 w-full object-cover" src="assets/package/makkah.jpg" alt="Tour Highlights">
 
-            <!-- Destinations -->
-            <div class="mb-4">
-              <h4 class="font-semibold text-slate-700 mb-2">📍 Destinations:</h4>
-              <ul class="list-disc list-inside text-slate-600 space-y-1">
-                <li>🏞️ ..........</li>
-                <li>🏛️ ...........</li>
-                <li>🛕 ...........</li>
-                <li>🐒 ............</li>
-                <li>🌊 ............</li>
-              </ul>
+            <!-- Price -->
+            <div class="absolute top-2 right-4 rounded-2xl bg-sky-400 text-black px-4 py-3 shadow-lg text-right">
+              <div class="text-xl sm:text-2xl font-extrabold leading-none">৳ 150,000</div>
+              <div class="text-[11px] sm:text-xs line-through text-black/90">৳ 155,000</div>
             </div>
+
+            <!-- Warning -->
+            <!-- <div
+              class="absolute top-40 left-0.5 rounded-2xl bg-amber-100/95 text-black px-4 py-2 shadow-lg flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5" viewBox="0 0 24 24"
+                fill="currentColor">
+                <path
+                  d="M12 2a1 1 0 0 1 .894.553l9 18A1 1 0 0 1 21 22H3a1 1 0 0 1-.894-1.447l9-18A1 1 0 0 1 12 2zm0 6a1 1 0 0 0-1 1v5a1 1 0 1 0 2 0V9a1 1 0 0 0-1-1zm0 10a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5z" />
+              </svg>
+              <span class="text-xs sm:text-sm font-semibold tracking-wide">This package is currently unavailable</span>
+            </div> -->
+          </div>
+
+          <div class="p-6">
+            <h3 class="text-2xl font-bold text-slate-800 mb-4">🌴 Umrah Package. <br>
+              <span class="text-lg font-semibold text-blue-500"></span>
+            </h3>
 
             <!-- Package Includes -->
-            <div class="mb-4">
-              <h4 class="font-semibold text-slate-700 mb-2">🎁 Package Includes:</h4>
-              <ul class="list-disc list-inside text-slate-600 space-y-1">
-                <li>🏨 3-Star Hotel & 🍴 Meals</li>
-                <li>🙏 ...........</li>
-                <li>🧭 Tour Guide</li>
-                <li>🚗 ............</li>
-              </ul>
-            </div>
+
+            <h4 class="text-lg font-bold">🎁 Package Includes:</h4>
+            <ul class="list-disc list-inside text-slate-600 space-y-1 mb-4">
+              <li>✈️ Flight</li>
+              <li>🏨 ......</li>
+              <li>........</li>
+              <li>..........</li>
+              <li> .............</li>
+              <li>🧭 .............</li>
+            </ul>
+
+            <!-- View Details Button -->
+            <button onclick="openDetails()"
+              class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded-lg shadow-md transition">
+              📄 View Details
+            </button>
           </div>
-
-
         </article>
+
+        <!-- ========== Overlay Modal ========== -->
+        <div id="msTours" class=" fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
+          <div
+            class="bg-white w-full max-w-2xl mx-4 rounded-xl shadow-lg p-6 overflow-y-auto max-h-[90vh] animate-slideDown">
+            <!-- Modal Header -->
+            <div class="flex justify-between items-center mb-4">
+              <h3 class="text-xl font-bold">🌞 Tour Details</h3>
+              <button onclick="closeDetails()" class=" text-red-500 font-bold text-lg">✖</button>
+            </div>
+
+            <!-- Modal Content -->
+            <!-- flight -->
+            <h4 class="text-lg font-bold">✈️ Flight</h4>
+            <ul class="list-disc list-inside mb-4">
+              <li>Return ticket with Indigo Airlines Or Srilankan Airlines</li>
+              <li>Dhaka → Maldives → Sri Lanka → Dhaka</li>
+            </ul>
+            <!-- hotel stay -->
+            <h4 class="text-lg font-bold">🏨 Hotel Stay</h4>
+            <ul class="list-disc list-inside mb-4">
+              <ul class="list-disc list-inside mb-4">
+                <h4 class="font-bold">Sri Lanka</h4>
+                <li>Huluhumale(3 nights at a 3-star hotel)</li>
+                <li><span class="font-semibold">Hotel:</span> Huvan Beach Hotel, Planktos Beach or Similar.</li>
+              </ul>
+              <ul class="list-disc list-inside mb-4">
+                <h4 class="font-bold">Maldives</h4>
+                <li>Colombo(1 nights at a 3-star hotel)</li>
+                <li>Kandy (2 nights at a 3-star hotel)</li>
+                <li><span class="font-semibold">Colombo Hotels:</span> Lafala Hotel & Service Apartment, GSH
+                  Colombo,Pearl City Hotel or Similar.
+                <li><span class="font-semibold">Kandy Hotels:</span>Galaxy City hotel, Rivora Gallery, Nature Walk
+                  resort or Similar.</li>
+              </ul>
+            </ul>
+            <!-- transport -->
+            <h4 class="text-lg font-bold">🚗Transport</h4>
+            <ul class="list-disc list-inside mb-4">
+              <li>Airport pick-up and drop-off</li>
+              <li>Colombo–Kandy–Colombo transfer</li>
+            </ul>
+            <!-- meals -->
+            <h4 class="text-lg font-bold">Meals</h4>
+            <ul class="list-disc list-inside mb-4">
+              <li>Daily breakfast.</li>
+            </ul>
+            <!-- Taxes & Charges:    -->
+            <h4 class="text-lg font-bold">Taxes & Charges.</h4>
+            <ul class="list-disc list-inside mb-4">
+              <li>All taxes and charges in Maldives and Sri Lanka included.</li>
+            </ul>
+            <!-- kandy highlight -->
+            <h4 class="text-lg font-bold">🐘Kandy Tour Highlights(Included):</h4>
+            <ul class="list-disc list-inside mb-4">
+              <li>🌿 Pinnawala Elephant Orphanage.</li>
+              <li>🌶 Spice Garden</li>
+              <li>🌸 Royal Botanical Garden</li>
+              <li>🌊 Kandy Lake</li>
+              <li>🕌 Temple of the Tooth</li>
+              <li>📸 Kandy Viewpoint</li>
+            </ul>
+            <!-- Nuwara Eliya Highlights  -->
+            <h4 class="text-lg font-bold">🌄Nuwara Eliya Tour Highlights(Included):</h4>
+            <ul class="list-disc list-inside mb-4">
+              <li>💦 Ramboda Waterfalls & Tea Plantations</li>
+              <li>🍃 Ceylon Tea Museum</li>
+              <li>🏡 Little England & Colonial Architecture</li>
+              <li>🚣 Lake Gregory</li>
+              <li>🌺 Victoria Park, Golf Club & Historic Post Office</li>
+            </ul>
+            <!-- optional atraction -->
+            <h4 class="text-lg font-bold text-red-600"">🌞Top Attractions in Maldives(Optional – at personal expense):</h4>
+            <ul class=" list-disc list-inside mb-4">
+              <li>🏝 Resort Day Tour (3, 4 & 5-star resorts)</li>
+              <li>🚤 Parasailing, Jet Ski, Fun Tube, Kayaking</li>
+              <li>🐠 Nems Tour, Fish Tank, Shipwreck Exploration</li>
+              <li>🏖 Gili Gili Island, Male & Hulhumale City Tour</li>
+              <li>🐬 Stingray Point, Coral Reef</li>
+              <li>🎁 Souvenir Street, Artificial Beach, Surfing Point</li>
+              </ul>
+              <!-- personal include -->
+              <h4 class="text-lg font-bold text-red-600">❌ Not Included (Personal Expenses)</h4>
+              <ul class="list-disc list-inside">
+                <li>Sri Lanka Visa Fee: $25 (approx. BDT 3,550)</li>
+                <li>Lunch and Dinner</li>
+                <li>Personal shopping & miscellaneous expenses</li>
+              </ul>
+          </div>
+        </div>
         <!-- Card 4 -->
         <article
           class="reveal group bg-white dark:bg-slate-800 rounded-2xl shadow hover:shadow-xl transition overflow-hidden border border-slate-100 dark:border-slate-700 card-animated">
