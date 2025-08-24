@@ -78,32 +78,37 @@ window.addEventListener('scroll', throttle(updateActiveNav, 150));
 window.addEventListener('load', updateActiveNav);
 
 // card 1 package...
-function openDetails() {
-  document.getElementById("nepalTours").classList.remove("hidden");
-  document.getElementById("nepalTours").classList.add("flex");
-}
-function closeDetails() {
-  document.getElementById("nepalTours").classList.add("hidden");
-  document.getElementById("nepalTours").classList.remove("flex");
-}
+
+// function openDetails() {
+//   document.getElementById("nepalTours").classList.remove("hidden");
+//   document.getElementById("nepalTours").classList.add("flex");
+// }
+// function closeDetails() {
+//   document.getElementById("nepalTours").classList.add("hidden");
+//   document.getElementById("nepalTours").classList.remove("flex");
+// }
+
 // card 2 package...
-function openDetails() {
-  document.getElementById("msTours").classList.remove("hidden");
-  document.getElementById("msTours").classList.add("flex");
-}
-function closeDetails() {
-  document.getElementById("msTours").classList.add("hidden");
-  document.getElementById("msTours").classList.remove("flex");
-}
+
+// function openDetails() {
+//   document.getElementById("msTours").classList.remove("hidden");
+//   document.getElementById("msTours").classList.add("flex");
+// }
+// function closeDetails() {
+//   document.getElementById("msTours").classList.add("hidden");
+//   document.getElementById("msTours").classList.remove("flex");
+// }
+
 // card 3 package...
-function openDetails() {
-  document.getElementById("umrahGroups").classList.remove("hidden");
-  document.getElementById("umrahGroups").classList.add("flex");
-}
-function closeDetails() {
-  document.getElementById("umrahGroups").classList.add("hidden");
-  document.getElementById("umrahGroups").classList.remove("flex");
-}
+
+// function openDetails() {
+//   document.getElementById("umrahGroups").classList.remove("hidden");
+//   document.getElementById("umrahGroups").classList.add("flex");
+// }
+// function closeDetails() {
+//   document.getElementById("umrahGroups").classList.add("hidden");
+//   document.getElementById("umrahGroups").classList.remove("flex");
+// }
 
 // Simple throttle
 function throttle(fn, wait) {
