@@ -95,6 +95,15 @@ function closeDetails() {
   document.getElementById("msTours").classList.add("hidden");
   document.getElementById("msTours").classList.remove("flex");
 }
+// card 3 package...
+function openDetails() {
+  document.getElementById("umrahGroups").classList.remove("hidden");
+  document.getElementById("umrahGroups").classList.add("flex");
+}
+function closeDetails() {
+  document.getElementById("umrahGroups").classList.add("hidden");
+  document.getElementById("umrahGroups").classList.remove("flex");
+}
 
 // Simple throttle
 function throttle(fn, wait) {
