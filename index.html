@@ -195,7 +195,7 @@
             </ul>
 
             <!-- View Details Button -->
-            <button onclick="openNepal()"
+            <button onclick="toggleDetails('nepalTours', true)"
               class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded-lg shadow-md transition">
               📄 View Details
             </button>
@@ -208,7 +208,7 @@
             <!-- Modal Header -->
             <div class="flex justify-between items-center mb-4">
               <h3 class="text-xl font-bold">🌞 Tour Details</h3>
-              <button onclick="closeNepal()" class=" text-red-500 font-bold text-lg">✖</button>
+              <button onclick="toggleDetails('nepalTours', false)" class="text-red-500 font-bold text-lg">✖</button>
             </div>
 
             <!-- Modal Content -->
@@ -308,7 +308,7 @@
             </ul>
 
             <!-- View Details Button -->
-            <button onclick="openMS()"
+            <button onclick="toggleDetails('msTours', true)"
               class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded-lg shadow-md transition">
               📄 View Details
             </button>
@@ -319,11 +319,11 @@
         <div id="msTours" class=" fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
           <div
             class="bg-white w-full max-w-2xl mx-4 rounded-xl shadow-lg p-6 overflow-y-auto max-h-[90vh] animate-slideDown">
-             <!-- Modal Header -->
+            <!-- Modal Header -->
             <div class="flex justify-between items-center mb-4">
               <h3 class="text-xl font-bold">🌞 Tour Details</h3>
-              <button onclick="closeMs()" class=" text-red-500 font-bold text-lg">✖</button>
-            </div> 
+              <button onclick="toggleDetails('msTours', false)" class="text-red-500 font-bold text-lg">✖</button>
+            </div>
 
             <!-- Modal Content -->
             <!-- flight -->
@@ -441,12 +441,12 @@
               <li>📅 25 Sep – 08 Oct 2025</li>
               <li>🏨 Makkah Hotel</li>
               <li>🏨 Madinah Hotel</li>
-              <li> 🛏️ Room Sharing Basis  </li>
+              <li> 🛏️ Room Sharing Basis </li>
               <li>🍱 Food Add-on: Extra 10,000/- (Optional)</li>
             </ul>
 
             <!-- View Details Button -->
-            <button onclick="openUmrah()"
+            <button onclick="toggleDetails('umrahGroups', true)"
               class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded-lg shadow-md transition">
               📄 View Details
             </button>
@@ -460,14 +460,14 @@
             <!-- Modal Header -->
             <div class="flex justify-between items-center mb-4">
               <h3 class="text-xl font-bold">🌞 Tour Details</h3>
-              <button onclick="closeUmrah()" class=" text-red-500 font-bold text-lg">✖</button>
+              <button onclick="toggleDetails('umrahGroups', false)" class="text-red-500 font-bold text-lg">✖</button>
             </div>
 
             <!-- Modal Content -->
             <!-- flight -->
             <h4 class="text-lg font-bold">✈️ Flight: (Transit)</h4>
             <ul class="list-disc list-inside mb-4">
-              <li>➡️ Dhaka → Jeddah: 1 hr 17 min Transit (via Kuwait)  </li>
+              <li>➡️ Dhaka → Jeddah: 1 hr 17 min Transit (via Kuwait) </li>
               <li>➡️ Madinah → Dhaka: 1 hr 30 min Transit (via Kuwait)</li>
             </ul>
             <!-- hotel stay -->
@@ -475,7 +475,7 @@
             <ul class="list-disc list-inside mb-4">
               <ul class="list-disc list-inside mb-4">
                 <h4 class="font-bold">🏨 Makkah Hotel:</h4>
-                <li>1000 meters from Haram | 10 Nights  </li>
+                <li>1000 meters from Haram | 10 Nights </li>
               </ul>
               <ul class="list-disc list-inside mb-4">
                 <h4 class="font-bold">🏨 Madinah Hotel: </h4>
@@ -485,16 +485,16 @@
             <!-- include -->
             <ul class="list-disc list-inside mb-4">
               <li>🛏️ Room Sharing Basis </li>
-              <li>🍽️ Without Food (Optional)  </li>
-              <li>🚌 Full Transport Included  </li>
+              <li>🍽️ Without Food (Optional) </li>
+              <li>🚌 Full Transport Included </li>
               <li>🕵️‍♂️ Guide & Jiyarah Included</li>
-              
+
             </ul>
             <!-- optional atraction -->
             <h4 class="text-lg font-bold text-red-600">Extra add-on</h4>
             <ul class=" list-disc list-inside mb-4">
               <li>🍱 Food Add-on: Extra 10,000/- (Optional)</li>
-              </ul>
+            </ul>
           </div>
         </div>
         <!-- Card 4 -->

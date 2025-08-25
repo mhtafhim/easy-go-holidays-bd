@@ -77,39 +77,18 @@ function updateActiveNav() {
 window.addEventListener('scroll', throttle(updateActiveNav, 150));
 window.addEventListener('load', updateActiveNav);
 
-// card 1 package...
+// generic toggle function for modals
 
-function openNepal() {
-  document.getElementById("nepalTours").classList.remove("hidden");
-  document.getElementById("nepalTours").classList.add("flex");
+function toggleDetails(id, show) {
+  const modal = document.getElementById(id);
+  if (show) {
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+  } else {
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+  }
 }
-function closeNepal() {
-  document.getElementById("nepalTours").classList.add("hidden");
-  document.getElementById("nepalTours").classList.remove("flex");
-}
-
-// card 2 package...
-
-function openMS() {
-  document.getElementById("msTours").classList.remove("hidden");
-  document.getElementById("msTours").classList.add("flex");
-}
-function closeMs() {
-  document.getElementById("msTours").classList.add("hidden");
-  document.getElementById("msTours").classList.remove("flex");
-}
-
-// card 3 package...
-
-function openUmrah() {
-  document.getElementById("umrahGroups").classList.remove("hidden");
-  document.getElementById("umrahGroups").classList.add("flex");
-}
-function closeUmrah() {
-  document.getElementById("umrahGroups").classList.add("hidden");
-  document.getElementById("umrahGroups").classList.remove("flex");
-}
-
 // Simple throttle
 function throttle(fn, wait) {
   let inThrottle = false;
