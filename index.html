@@ -476,20 +476,20 @@
         </div>
         <!-- Card 4 -->
         <article
-          class="reveal group bg-white dark:bg-slate-800 rounded-2xl shadow hover:shadow-xl transition overflow-hidden border border-slate-100 dark:border-slate-700 card-animated">
+          class="bg-white dark:bg-slate-800 rounded-2xl shadow hover:shadow-xl transition overflow-hidden border border-slate-100 dark:border-slate-700">
           <div class="relative">
-            <img class="h-56 w-full object-cover"
-              src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2064&auto=format&fit=crop"
-              alt="Bandarban Hills">
+            <img class="h-fit w-full object-cover" src="assets/package/thailand.PNG" alt="Tour Highlights">
 
             <!-- Price -->
-            <div class="absolute top-2 right-4 rounded-2xl bg-sky-400 text-black px-4 py-3 shadow-lg text-right">
-              <div class="text-xl sm:text-2xl font-extrabold leading-none">৳ --, ---</div>
-              <div class="text-[11px] sm:text-xs line-through text-black/90">৳ --,---</div>
+            <div class="absolute top-2 right-4 rounded-2xl bg-whit
+            -0.5 text-black px-4 py-3 shadow-lg text-right">
+              <div class="text-xl sm:text-2xl font-extrabold leading-none">৳ 000,000</div>
+              <div class="text-[11px] sm:text-xs line-through text-black/90">৳ 000,000</div>
             </div>
-            <!-- Warning / Notice Badge -->
+
+            <!-- Warning -->
             <div
-              class="absolute top-40 left-0.5 rounded-2xl bg-amber-100/95 text-black px-4 py-2 shadow-lg flex items-center gap-2">
+              class="absolute top-56 left-0.5 rounded-2xl bg-amber-100/95 text-black px-4 py-2 shadow-lg flex items-center gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5" viewBox="0 0 24 24"
                 fill="currentColor">
                 <path
@@ -499,19 +499,58 @@
             </div>
           </div>
 
-          <div class="p-6 bg-white rounded-lg shadow-lg max-w-xl mx-auto">
-            <h3 class="text-sm font-bold text-slate-800 mb-4">🌏 China Tour </h3>
-
-            <!-- Destinations -->
-            <div class="mb-4">
-              <h4 class="font-semibold text-slate-700 mb-2">📍 Destinations:</h4>
-              <ul class="list-disc list-inside text-slate-600 space-y-1">
-                <li>................</li>
-                <li>................</li>
-              </ul>
-            </div>
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-slate-800 mb-4">Thailand Tour<br>
+              <span class="text-sm font-semibold text-blue-500">...........</span>
+            </h3>
+            <!-- View Details Button -->
+            <button onclick="toggleDetails('thailandTour', true)"
+              class="bg-blue-500 hover:bg-blue-600 text-sm text-white font-semibold  px-4 py-2 rounded-lg shadow-md transition">
+              📄 View Details
+            </button>
           </div>
         </article>
+
+        <!-- ========== Overlay Modal ========== -->
+        <div id="thailandTour" class=" fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
+          <div
+            class="bg-white w-full max-w-2xl mx-4 rounded-xl shadow-lg p-6 overflow-y-auto max-h-[90vh] animate-slideDown">
+            <!-- Modal Header -->
+            <div class="flex justify-between items-center mb-4">
+              <h3 class="text-xl font-bold">🌞 Tour Details</h3>
+              <button onclick="toggleDetails('thailandTour', false)" class="text-red-500 font-bold text-lg">✖</button>
+            </div>
+
+            <!-- Modal Content -->
+            <!-- flight -->
+            <li>.........</li>
+            <h4 class="text-lg font-bold">✈️ Flight: (Transit)</h4>
+            <ul class="list-disc list-inside mb-4">
+              <li>➡️ ......... </li>
+              <li>➡️ .........</li>
+            </ul>
+            <!-- hotel stay -->
+            <h4 class="text-lg font-bold">🏨 Hotel Stay</h4>
+            <ul class="list-disc list-inside mb-4">
+              <ul class="list-disc list-inside mb-4">
+                <h4 class="font-bold">🏨 .........</h4>
+                <li>......... </li>
+              </ul>
+              <ul class="list-disc list-inside mb-4">
+                <h4 class="font-bold">🏨 ......... </h4>
+                <li> ......... </li>
+              </ul>
+            </ul>
+            <!-- include -->
+            <ul class="list-disc list-inside mb-4">
+              <li>🛏️ .........</li>
+              <li>🍽️ ......... </li>
+              <li>🚌 ......... </li>
+              <li>🕵️‍♂️ .........</li>
+
+            </ul>
+          </div>
+        </div>
         <!-- Card 5 -->
         <article
           class="reveal group bg-white dark:bg-slate-800 rounded-2xl shadow hover:shadow-xl transition overflow-hidden border border-slate-100 dark:border-slate-700 card-animated">
@@ -575,7 +614,7 @@
           </div>
 
           <div class="p-6 bg-white rounded-lg shadow-lg max-w-xl mx-auto">
-            <h3 class="text-sm font-bold text-slate-800 mb-4">🌏 Thailand Tour</h3>
+            <h3 class="text-sm font-bold text-slate-800 mb-4">🌏 China Tour</h3>
 
             <!-- Destinations -->
             <div class="mb-4">
@@ -630,34 +669,28 @@
       <div class="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
         <!-- img 1 -->
         <img class="reveal gallery-img aspect-[4/3] w-full object-cover rounded-xl hover:scale-[1.02] transition shadow"
-          src="assets/trip gallery/01.JPG"
-          alt="Gallery image 1">
+          src="assets/trip gallery/01.JPG" alt="Gallery image 1">
         <!-- img 2 -->
         <img class="reveal gallery-img aspect-[4/3] w-full object-cover rounded-xl hover:scale-[1.02] transition shadow"
-          src="assets/trip gallery/02.JPG"
-          alt="Gallery image 2">
+          src="assets/trip gallery/02.JPG" alt="Gallery image 2">
         <!-- img 3 -->
         <img class="reveal gallery-img aspect-[4/3] w-full object-cover rounded-xl hover:scale-[1.02] transition shadow"
-          src="assets/trip gallery/03.JPG"
-          alt="Gallery image 3">
+          src="assets/trip gallery/03.JPG" alt="Gallery image 3">
         <!-- img 4 -->
         <img class="reveal gallery-img aspect-[4/3] w-full object-cover rounded-xl hover:scale-[1.02] transition shadow"
-          src="assets/trip gallery/04.JPG"
-          alt="Gallery image 4">
+          src="assets/trip gallery/04.JPG" alt="Gallery image 4">
         <!-- img 5 -->
         <img class="reveal gallery-img aspect-[4/3] w-full object-cover rounded-xl hover:scale-[1.02] transition shadow"
           src="assets/trip gallery/05.JPG" alt="Gallery image 5">
         <!-- img 6 -->
         <img class="reveal gallery-img aspect-[4/3] w-full object-cover rounded-xl hover:scale-[1.02] transition shadow"
-          src="assets/trip gallery/06.jpg"
-          alt="Gallery image 6">
+          src="assets/trip gallery/06.jpg" alt="Gallery image 6">
         <!-- img 7 -->
         <img class="reveal gallery-img aspect-[4/3] w-full object-cover rounded-xl hover:scale-[1.02] transition shadow"
           src="assets/trip gallery/07.jpg" alt="Gallery image 7">
         <!-- img 8 -->
         <img class="reveal gallery-img aspect-[4/3] w-full object-cover rounded-xl hover:scale-[1.02] transition shadow"
-          src="assets/trip gallery/08.jpg"
-          alt="Gallery image 8">
+          src="assets/trip gallery/08.jpg" alt="Gallery image 8">
         <!-- img 9 -->
         <img class="reveal gallery-img aspect-[4/3] w-full object-cover rounded-xl hover:scale-[1.02] transition shadow"
           src="assets/trip gallery/09.jpg" alt="Gallery image 9">
@@ -669,16 +702,13 @@
           src="assets/trip gallery/11.jpeg" alt="Gallery image 11">
         <!-- img 12 -->
         <img class="reveal gallery-img aspect-[4/3] w-full object-cover rounded-xl hover:scale-[1.02] transition shadow"
-          src="assets/trip gallery/12.jpeg"
-          alt="Gallery image 12">
+          src="assets/trip gallery/12.jpeg" alt="Gallery image 12">
         <!-- img 13 -->
         <img class="reveal gallery-img aspect-[4/3] w-full object-cover rounded-xl hover:scale-[1.02] transition shadow"
-          src="assets/trip gallery/13.jpeg"
-          alt="Gallery image 12">
+          src="assets/trip gallery/13.jpeg" alt="Gallery image 12">
         <!-- img 14 -->
         <img class="reveal gallery-img aspect-[4/3] w-full object-cover rounded-xl hover:scale-[1.02] transition shadow"
-          src="assets/trip gallery/14.jpeg"
-          alt="Gallery image 12">
+          src="assets/trip gallery/14.jpeg" alt="Gallery image 12">
       </div>
     </div>
     <!-- Lightbox -->
@@ -704,11 +734,10 @@
             style="will-change: transform;">
             <!-- Slide 1 -->
             <div class="shrink-0 w-full p-6 sm:p-10 grid sm:grid-cols-[120px,1fr] gap-6 items-center">
-              <img class="h-24 w-24 rounded-full object-cover" src="https://randomuser.me/api/portraits/women/68.jpg"
-                alt="Customer A">
+              <img class="h-24 w-24 rounded-full object-cover" src="assets/review/akram.jpg" alt="Customer A">
               <div>
                 <div class="flex items-center justify-between">
-                  <h3 class="font-bold text-lg">Nusrat Jahan</h3>
+                  <h3 class="font-bold text-lg">Akram Hossain</h3>
                   <div class="text-yellow-500">★★★★★</div>
                 </div>
                 <p class="mt-2 text-slate-600 dark:text-slate-300">Seamless experience! They handled everything from
@@ -717,11 +746,10 @@
             </div>
             <!-- Slide 2 -->
             <div class="shrink-0 w-full p-6 sm:p-10 grid sm:grid-cols-[120px,1fr] gap-6 items-center">
-              <img class="h-24 w-24 rounded-full object-cover" src="https://randomuser.me/api/portraits/men/75.jpg"
-                alt="Customer B">
+              <img class="h-24 w-24 rounded-full object-cover" src="assets/review/somrat.jpg" alt="Customer B">
               <div>
                 <div class="flex items-center justify-between">
-                  <h3 class="font-bold text-lg">Rakib Hasan</h3>
+                  <h3 class="font-bold text-lg">MD Somrat Akbar</h3>
                   <div class="text-yellow-500">★★★★★</div>
                 </div>
                 <p class="mt-2 text-slate-600 dark:text-slate-300">Quick responses and great value for money. Highly
@@ -743,15 +771,62 @@
             </div>
             <!-- Slide 4 -->
             <div class="shrink-0 w-full p-6 sm:p-10 grid sm:grid-cols-[120px,1fr] gap-6 items-center">
-              <img class="h-24 w-24 rounded-full object-cover" src="https://randomuser.me/api/portraits/men/12.jpg"
-                alt="Customer D">
+              <img class="h-24 w-24 rounded-full object-cover" src="assets/review/abid.jpg" alt="Customer D">
               <div>
                 <div class="flex items-center justify-between">
-                  <h3 class="font-bold text-lg">Shahriyar Alam</h3>
+                  <h3 class="font-bold text-lg">Abid Hasan</h3>
+                  <div class="text-yellow-500">★★★★★</div>
+                </div>
+                <p class="mt-2 text-slate-600 dark:text-slate-300">Had a wonderful experience with Easy Go Holidays.
+                  Everything was smooth, comfortable, and perfectly arranged.</p>
+              </div>
+            </div>
+            <!-- Slide 5 -->
+            <div class="shrink-0 w-full p-6 sm:p-10 grid sm:grid-cols-[120px,1fr] gap-6 items-center">
+              <img class="h-24 w-24 rounded-full object-cover" src="assets/review/naim.jpg" alt="Customer D">
+              <div>
+                <div class="flex items-center justify-between">
+                  <h3 class="font-bold text-lg">Farabi</h3>
                   <div class="text-yellow-500">★★★★★</div>
                 </div>
                 <p class="mt-2 text-slate-600 dark:text-slate-300">Their team made our visa and hotel bookings super
                   easy for our Thailand trip.</p>
+              </div>
+            </div>
+            <!-- Slide 6 -->
+            <div class="shrink-0 w-full p-6 sm:p-10 grid sm:grid-cols-[120px,1fr] gap-6 items-center">
+              <img class="h-24 w-24 rounded-full object-cover" src="assets/review/tafhim.jpg" alt="Customer D">
+              <div>
+                <div class="flex items-center justify-between">
+                  <h3 class="font-bold text-lg">Tafhim</h3>
+                  <div class="text-yellow-500">★★★★★</div>
+                </div>
+                <p class="mt-2 text-slate-600 dark:text-slate-300">Easy Go Holidays made my trip truly hassle-free and
+                  memorable. Their service was professional and very well organized.</p>
+              </div>
+            </div>
+            <!-- Slider 7 -->
+            <div class="shrink-0 w-full p-6 sm:p-10 grid sm:grid-cols-[120px,1fr] gap-6 items-center">
+              <img class="h-24 w-24 rounded-full object-cover" src="assets/review/tahin.jpg" alt="Customer D">
+              <div>
+                <div class="flex items-center justify-between">
+                  <h3 class="font-bold text-lg">Tahin</h3>
+                  <div class="text-yellow-500">★★★★★</div>
+                </div>
+                <p class="mt-2 text-slate-600 dark:text-slate-300">Easy Go Holidays exceeded my expectations with
+                  excellent service and attention to detail. Highly recommended!.</p>
+              </div>
+            </div>
+            <!-- slider 8 -->
+            <div class="shrink-0 w-full p-6 sm:p-10 grid sm:grid-cols-[120px,1fr] gap-6 items-center">
+              <img class="h-24 w-24 rounded-full object-cover" src="assets/review/ifad.jpg" alt="Customer D">
+              <div>
+                <div class="flex items-center justify-between">
+                  <h3 class="font-bold text-lg">Ifad Hossain</h3>
+                  <div class="text-yellow-500">★★★★★</div>
+                </div>
+                <p class="mt-2 text-slate-600 dark:text-slate-300">Traveling with Easy Go Holidays was an absolute
+                  delight — well-planned, reliable, and memorable from start to finish.</p>
               </div>
             </div>
           </div>
