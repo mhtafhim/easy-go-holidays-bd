@@ -7,6 +7,7 @@ if (menuToggleButton && mobileMenu) {
   });
 }
 
+
 // Theme: init and toggle
 const themeToggleButton = document.getElementById('themeToggle');
 const iconSun = document.getElementById('themeIconSun');
@@ -287,7 +288,7 @@ function renderFromData() {
         mobileLinksContainer.innerHTML = data.navLinks.map(l => `<a href="${l.href}" class="nav-link block px-2 py-2 rounded hover:bg-slate-100 hover:dark:bg-slate-800 dark:text-slate-200">${l.label}</a>`).join('');
       }
     }
-  } catch {}
+  } catch { }
 
   // Gallery images
   try {
@@ -299,7 +300,7 @@ function renderFromData() {
       setupGalleryBindings();
       observeRevealTargets();
     }
-  } catch {}
+  } catch { }
 
   // Reviews slides
   try {
@@ -320,7 +321,7 @@ function renderFromData() {
       updateReviewsTransform();
       startAutoSlide();
     }
-  } catch {}
+  } catch { }
 
   // Packages grid: target the first grid under #packages
   try {
@@ -372,7 +373,7 @@ function renderFromData() {
       });
       observeRevealTargets();
     }
-  } catch {}
+  } catch { }
 
   // Rebind nav links after rebuild
   setupNavLinks();
