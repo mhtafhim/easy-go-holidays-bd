@@ -82,6 +82,7 @@ function updateActiveNav() {
 window.addEventListener('scroll', throttle(updateActiveNav, 150));
 window.addEventListener('load', updateActiveNav);
 
+
 // generic toggle function for modals
 
 function toggleDetails(id, show) {
