@@ -161,7 +161,7 @@ html.dark #mobileMenu a:hover {
   transform: translateY(-6px);
 }
 
-/* card 2 package */
+/*  packages */
 @keyframes slideDown {
   from {
     transform: translateY(-20px);
