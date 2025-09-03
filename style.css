@@ -1,5 +1,4 @@
-
- /* WhatsApp Floating Button  */
+/* WhatsApp Floating Button  */
 
 .whatsapp-float {
   position: fixed;
@@ -25,6 +24,24 @@
 .whatsapp-float:hover {
   transform: scale(1.1);
   box-shadow: 0 0 15px #25D366;
+}
+
+
+/* social box */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 1s ease-out forwards;
 }
 
 
