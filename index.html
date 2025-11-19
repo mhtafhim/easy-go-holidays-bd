@@ -178,6 +178,120 @@
       </div>
       <div class="mt-10 grid gap-6 sm:gap-8 grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
 
+        <!-- Card o-nepal special tour -->
+        <article
+          class="bg-white dark:bg-slate-800 rounded-2xl shadow hover:shadow-xl transition overflow-hidden border border-slate-100 dark:border-slate-700">
+          <div class="relative">
+            <img class="h-56 w-full object-cover" src="assets/package/nepal-special.jpg" alt="Tour Highlights">
+
+            <!-- Price -->
+            <div class="absolute top-2 right-4 rounded-2xl bg-blue-400 text-black px-4 py-3 shadow-lg text-right">
+              <div class="text-xl sm:text-2xl font-extrabold leading-none">৳ 19,999</div>
+              <div class="text-[11px] sm:text-xs line-through text-black/90">৳ 18,500</div>
+            </div>
+
+            <!-- Warning -->
+            <!-- <div
+              class="absolute top-40 left-0.5 rounded-2xl bg-amber-100/95 text-black px-4 py-2 shadow-lg flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5" viewBox="0 0 24 24"
+                fill="currentColor">
+                <path
+                  d="M12 2a1 1 0 0 1 .894.553l9 18A1 1 0 0 1 21 22H3a1 1 0 0 1-.894-1.447l9-18A1 1 0 0 1 12 2zm0 6a1 1 0 0 0-1 1v5a1 1 0 1 0 2 0V9a1 1 0 0 0-1-1zm0 10a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5z" />
+              </svg>
+              <span class="text-xs sm:text-sm font-semibold tracking-wide">This package is currently unavailable</span>
+            </div> -->
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-slate-800 mb-4">
+              🌏Winter Special Tour-Nepal.<br>
+              <span class="text-sm font-semibold text-blue-500"> 5 Days, 4 Nights.</span>
+            </h3>
+
+            <!-- Package Includes -->
+
+            <h4 class="text-lg font-bold">❌What’s not included:</h4>
+            <ul class="list-disc list-inside text-slate-600 space-y-1 mb-4">
+              <li>✘ Air tickets</li>
+              <li>✘ Lunch & dinner</li>
+              <li>✘ Entry tickets</li>
+            </ul>
+
+            <!-- View Details Button -->
+            <button onclick="toggleDetails('specialTour', true)"
+              class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded-lg shadow-md transition">
+              📄 View Details
+            </button>
+          </div>
+        </article>
+        <!-- ========== Overlay Modal- card 1 ========== -->
+        <div id="specialTour" class=" fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
+          <div
+            class="bg-white w-full max-w-2xl mx-4 rounded-xl shadow-lg p-6 overflow-y-auto max-h-[90vh] animate-slideDown">
+            <!-- Modal Header -->
+            <div class="flex justify-between items-center mb-4">
+              <h3 class="text-xl font-bold">🌞 Tour Details</h3>
+              <button onclick="toggleDetails('specialTour', false)" class="text-red-500 font-bold text-lg">✖</button>
+            </div>
+
+            <!-- Modal Content -->
+            <!-- day 1 -->
+            <ul class="list-disc list-inside mb-4">
+              <h4>🌄Easy Go Holidays – নেপাল উইন্টার স্পেশাল ট্যুর ২০২৫🌄</h4>
+              <li>✨ ৪ রাত ৫ দিন | কাঠমান্ডু – পোখরা – নাগরকোট ✨</li>
+            </ul>
+            <!-- day 2 -->
+            <h4 class="text-lg font-bold">💰 অবিশ্বাস্য প্রাইস — মাত্র ৳১৮,৫০০!</h4>
+            <ul class="list-disc list-inside mb-4">
+              <h5>🔥 উপলব্ধ তারিখসমূহ:</h5>
+              <li>📅 ১৪ ডিসেম্বর – ১৮ ডিসেম্বর</li>
+              <li>📅 ২১ ডিসেম্বর – ২৫ ডিসেম্বর</li>
+              <li>📅 ২৮ ডিসেম্বর – ০১ জানুয়ারি</li>
+              <li>📅 ১১ জানুয়ারি – ১৫ জানুয়ারি</li>
+              <li>📅 ১৮ জানুয়ারি – ২২ জানুয়ারি</li>
+            </ul>
+            <!-- day 3 -->
+            <h4 class="text-lg font-bold">💥 ১৮,৫০০ টাকায় যা যা থাকছে:</h4>
+            <ul class="list-disc list-inside mb-4">
+              <li>🏨 ৩-স্টার হোটেল</li>
+              <li>🥐 প্রতিদিন ব্রেকফাস্ট</li>
+              <li>🚗 এয়ারপোর্ট পিক & ড্রপ</li>
+              <li>🚘 ফুল সাইটসিইং ট্যুর:</li>
+              <li> ✨ কাঠমান্ডু সিটি ট্যুর (দরবার স্কয়ার, স্বয়ম্ভূনাথ, পশুপতিনাথ)</li>
+              <li>✨ পোখরা ট্যুর: ফেওয়া লেক, লেকসাইড, সারঙকোট সানরাইজ</li>
+              <li>✨ নাগরকোট সানরাইজ ভিউ 🌄</li>
+              <li>🛺 পুরো ট্যুরে প্রাইভেট ট্রান্সপোর্ট</li>
+              <li>📸 হিমালয়, লেক, পাহাড়, মেঘ—দারুণ সব ফটোস্পট!</li>
+            </ul>
+            <!-- day 4 -->
+            <h4 class="text-lg font-bold text-red-500">❌ যা যা অন্তর্ভুক্ত নয়:</h4>
+            <ul class="list-disc list-inside mb-4">
+              <li>✘ এয়ার টিকিট</li>
+              <li>✘ লাঞ্চ ও ডিনার</li>
+              <li>✘ এন্ট্রি টিকিট</li>
+              <li>✘ ব্যক্তিগত খরচ</li>
+              <li>✘ অতিরিক্ত যেকোনো ব্যয়</li>
+            </ul>
+            <!-- day 5 -->
+            <h4 class="text-lg font-bold">✨ কেন এই ট্যুরটা এত জনপ্রিয়?</h4>
+            <ul class="list-disc list-inside mb-4">
+              <li>⭐ মাত্র ১৮,৫০০ টাকায়—বাংলাদেশের সেরা বাজেট নেপাল ট্যুর</li>
+              <li>⭐ ৩টি টপ লোকেশন একসাথে: কাঠমান্ডু + পোখরা + নাগরকোট</li>
+              <li>⭐ কাপল/ফ্রেন্ডস/ফ্যামিলি—সবার জন্য পারফেক্ট</li>
+              <li>⭐ নিউ ইয়ার/উইন্টার ট্রিপের জন্য একদম Ideal</li>
+            </ul>
+            <!-- day 5 -->
+            <h4 class="text-lg font-bold">Contact:</h4>
+            <ul class="list-disc list-inside mb-4">
+              <li>+8801860445774</li>
+              <li>+8801860447553</li>
+              <li>📩Email:easygoholidaysbd@gmail.com</li>
+            </ul>
+            <h4 class="text-lg font-bold">Office Address:</h4>
+            <ul class="list-disc list-inside mb-4">
+              <li>House-2/1, Road-04, Block -H, Level-1, Banasree, Dhaka-1219.</li>
+          </div>
+
+        </div>
         <!-- Card 1 -->
         <article
           class="bg-white dark:bg-slate-800 rounded-2xl shadow hover:shadow-xl transition overflow-hidden border border-slate-100 dark:border-slate-700">
