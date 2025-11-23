@@ -26,6 +26,24 @@
   box-shadow: 0 0 15px #25D366;
 }
 
+/* hero gateway */
+
+#gateway{
+  width: 30ch;
+  margin:auto;
+  text-wrap: nowrap;
+  font-family: monospace;
+  overflow: hidden;
+  animation: typing 2s steps(40) infinite alternate-reverse;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
 
 /* social box */
 @keyframes fadeInUp {
