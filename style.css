@@ -34,7 +34,7 @@
   text-wrap: nowrap;
   font-family: monospace;
   overflow: hidden;
-  animation: typing 4s steps(40) infinite alternate-reverse;
+  animation: typing 4s steps(40) infinite ;
 }
 @keyframes typing {
   from {
